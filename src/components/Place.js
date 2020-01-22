@@ -1,31 +1,30 @@
-import React from "react";
-import { connect } from "react-redux";
-import LazyLoad from "react-lazyload";
+import React from 'react'
+import { connect } from 'react-redux'
+import ImgCard from './ImgCard'
+import { MainHeader } from './styles'
 
 const Place = ({ match, photos }) => {
-  const { place } = match.params;
-  console.log(photos);
+  const { place } = match.params
+  console.log(photos)
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <h2>{place}</h2>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <MainHeader>{place}</MainHeader>
       {photos.map(p => {
         return (
-          <LazyLoad height={500} offset={100}>
-            <div style={{ height: 500 }}>
-              <img src={p.url} width={500} />
-            </div>
-          </LazyLoad>
-        );
+          <div key={p.url}>
+            <ImgCard url={p.url} title={p.title} description={p.description} />
+          </div>
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
 const mapState = state => {
   const {
-    view: { photos }
-  } = state;
-  return { photos };
-};
+    view: { photos },
+  } = state
+  return { photos }
+}
 
-export default connect(mapState)(Place);
+export default connect(mapState)(Place)

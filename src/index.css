@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Euclid;
+  src: url('./fonts/Euclid.ttf');
+}
+@font-face {
+  font-family: Arial;
+  src: url('./fonts/Ari.ttf');
+}
+
+body {
+  margin: 0;
+}
