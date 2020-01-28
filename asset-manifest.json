@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "traysimay.github.io/ceres2/static/css/main.0036da2d.chunk.css",
-    "main.js": "traysimay.github.io/ceres2/static/js/main.22ebf8f6.chunk.js",
-    "main.js.map": "traysimay.github.io/ceres2/static/js/main.22ebf8f6.chunk.js.map",
-    "runtime-main.js": "traysimay.github.io/ceres2/static/js/runtime-main.85ba9d93.js",
-    "runtime-main.js.map": "traysimay.github.io/ceres2/static/js/runtime-main.85ba9d93.js.map",
-    "static/js/2.0f42e092.chunk.js": "traysimay.github.io/ceres2/static/js/2.0f42e092.chunk.js",
-    "static/js/2.0f42e092.chunk.js.map": "traysimay.github.io/ceres2/static/js/2.0f42e092.chunk.js.map",
-    "index.html": "traysimay.github.io/ceres2/index.html",
-    "precache-manifest.998efbf7e3a90b2513157b989421a301.js": "traysimay.github.io/ceres2/precache-manifest.998efbf7e3a90b2513157b989421a301.js",
-    "service-worker.js": "traysimay.github.io/ceres2/service-worker.js",
-    "static/css/main.0036da2d.chunk.css.map": "traysimay.github.io/ceres2/static/css/main.0036da2d.chunk.css.map",
-    "static/js/2.0f42e092.chunk.js.LICENSE": "traysimay.github.io/ceres2/static/js/2.0f42e092.chunk.js.LICENSE",
-    "static/media/index.css": "traysimay.github.io/ceres2/static/media/Euclid.11fb02bf.ttf"
+    "main.css": "/ceres2/static/css/main.2f546f6f.chunk.css",
+    "main.js": "/ceres2/static/js/main.22ebf8f6.chunk.js",
+    "main.js.map": "/ceres2/static/js/main.22ebf8f6.chunk.js.map",
+    "runtime-main.js": "/ceres2/static/js/runtime-main.3d23d8a2.js",
+    "runtime-main.js.map": "/ceres2/static/js/runtime-main.3d23d8a2.js.map",
+    "static/js/2.02d9f2a2.chunk.js": "/ceres2/static/js/2.02d9f2a2.chunk.js",
+    "static/js/2.02d9f2a2.chunk.js.map": "/ceres2/static/js/2.02d9f2a2.chunk.js.map",
+    "index.html": "/ceres2/index.html",
+    "precache-manifest.240008455fa3944ecf0fa1de3debe901.js": "/ceres2/precache-manifest.240008455fa3944ecf0fa1de3debe901.js",
+    "service-worker.js": "/ceres2/service-worker.js",
+    "static/css/main.2f546f6f.chunk.css.map": "/ceres2/static/css/main.2f546f6f.chunk.css.map",
+    "static/js/2.02d9f2a2.chunk.js.LICENSE": "/ceres2/static/js/2.02d9f2a2.chunk.js.LICENSE",
+    "static/media/index.css": "/ceres2/static/media/Euclid.11fb02bf.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.85ba9d93.js",
-    "static/js/2.0f42e092.chunk.js",
-    "static/css/main.0036da2d.chunk.css",
+    "static/js/runtime-main.3d23d8a2.js",
+    "static/js/2.02d9f2a2.chunk.js",
+    "static/css/main.2f546f6f.chunk.css",
     "static/js/main.22ebf8f6.chunk.js"
   ]
 }
