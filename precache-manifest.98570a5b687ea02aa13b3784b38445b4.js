@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb9d0adce6eb4d206d12264e11053258",
+    "revision": "0bcd230b9f0574a2ee8fa9ca80f7bc4c",
     "url": "/ceres2/index.html"
   },
   {
-    "revision": "57dd25eb6a0c43333ec9",
+    "revision": "eb3c7a565a9c05f696e8",
     "url": "/ceres2/static/css/main.2f546f6f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ceres2/static/js/2.02d9f2a2.chunk.js.LICENSE"
   },
   {
-    "revision": "57dd25eb6a0c43333ec9",
-    "url": "/ceres2/static/js/main.22ebf8f6.chunk.js"
+    "revision": "eb3c7a565a9c05f696e8",
+    "url": "/ceres2/static/js/main.8e28b0b4.chunk.js"
   },
   {
     "revision": "6ce1b4dc0fdb9f115a73",
