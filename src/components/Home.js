@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import styled, { keyframes } from "styled-components";
 import Lottie from "react-lottie";
-import Eye from "./Eye";
 import EyeAnimation from "../lottie/eye.json";
+import HelloAnimation from "../lottie/hello.json";
 
 const PlaceHeader = styled.div`
   font-family: Arial;
@@ -45,7 +45,13 @@ const Home = ({ history, loading, previews }) => {
   if (loading)
     return (
       <div>
-        <div>loading...</div>
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: HelloAnimation
+          }}
+        />
       </div>
     );
   return (
