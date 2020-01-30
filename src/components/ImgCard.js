@@ -1,10 +1,27 @@
-import React, { useState } from 'react'
-import LazyLoad from 'react-lazyload'
-import Lottie from 'react-lottie'
-import animationData from '../lottie/circle.json'
+import React, { useState } from "react";
+import LazyLoad from "react-lazyload";
+import Lottie from "react-lottie";
+import animationData from "../lottie/circle.json";
 
-const ImgCard = ({ description, title, url }) => {
-  const [loaded, setLoaded] = useState(false)
+import styled from "styled-components";
+
+const BottomWrapper = styled.div`
+  margin: 1.7rem 1.2rem;
+`;
+
+const ImgTitle = styled.div`
+  font-family: Arial;
+  font-size: 2rem;
+`;
+
+const ImgDesc = styled.div`
+  font-family: Euclid;
+  font-size: 1rem;
+  margin: 0.5rem;
+`;
+
+const ImgCard = ({ description, id, orientation, title, url }) => {
+  const [loaded, setLoaded] = useState(false);
   return (
     <LazyLoad
       loader={() => <div>FUCK</div>}
@@ -21,17 +38,27 @@ const ImgCard = ({ description, title, url }) => {
         )}
         <img
           alt="forg"
-          style={{ display: loaded ? 'block' : 'none' }}
+          style={{
+            display: loaded ? "block" : "none",
+            maxWidth: "500px",
+            transform: orientation === "portrait" ? "rotate(90deg)" : ""
+          }}
           src={url}
+          src={`https://chimpstagram-upload.glitch.me/imgs/${id}.png`}
           width="100%"
-          onLoad={() => setLoaded(true)}
+          onLoad={e => {
+            console.log(e.target.height);
+            setLoaded(true);
+          }}
           onError={() => setLoaded(true)}
         />
-        <div style={{ fontFamily: 'Arial' }}>{title}</div>
-        <div style={{ fontFamily: 'Euclid' }}>{description}</div>
+        <BottomWrapper>
+          <ImgTitle>{title}</ImgTitle>
+          <ImgDesc>{description}</ImgDesc>
+        </BottomWrapper>
       </div>
     </LazyLoad>
-  )
-}
+  );
+};
 
-export default ImgCard
+export default ImgCard;
