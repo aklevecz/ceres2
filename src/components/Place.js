@@ -84,26 +84,28 @@ const Place = ({ history, match, photos }) => {
       />
       <MainHeader>{place}</MainHeader>
       <Container>
-        {photos.map(p => {
-          return (
-            <CardContainer
-              key={p.url}
-              to={`${match.url}/chicken/${p.id}`}
-              onClick={() => {
-                console.log("ASDASDASD");
-                history.push(`${match.url}/view/${p.id}`);
-              }}
-            >
-              <ImgCard
-                id={p.id}
-                url={p.url}
-                title={p.title}
-                description={p.description}
-                orientation={p.orientation}
-              />
-            </CardContainer>
-          );
-        })}
+        {photos
+          .filter(p => p.folder === place)
+          .map(p => {
+            return (
+              <CardContainer
+                key={p.url}
+                to={`${match.url}/chicken/${p.id}`}
+                onClick={() => {
+                  console.log("ASDASDASD");
+                  history.push(`${match.url}/view/${p.id}`);
+                }}
+              >
+                <ImgCard
+                  id={p.id}
+                  url={p.url}
+                  title={p.title}
+                  description={p.description}
+                  orientation={p.orientation}
+                />
+              </CardContainer>
+            );
+          })}
       </Container>
     </div>
   );

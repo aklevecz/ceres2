@@ -69,18 +69,20 @@ const Home = ({ history, loading, previews }) => {
           ]}
         />
       </div>
-      {previews.map(p => {
-        return (
-          <PlaceContainer key={p.title}>
-            <img
-              style={{ display: "block", margin: "auto", width: "100%" }}
-              src={p.url}
-              onClick={() => history.push(`/place/${p.folder}`)}
-            />
-            <PlaceHeader>{p.folder}</PlaceHeader>
-          </PlaceContainer>
-        );
-      })}
+      <div style={{ display: window.innerWidth > 768 ? "flex" : "block" }}>
+        {previews.map(p => {
+          return (
+            <PlaceContainer key={p.title}>
+              <img
+                style={{ display: "block", margin: "auto", width: "100%" }}
+                src={p.url}
+                onClick={() => history.push(`/place/${p.folder}`)}
+              />
+              <PlaceHeader>{p.folder}</PlaceHeader>
+            </PlaceContainer>
+          );
+        })}
+      </div>
     </div>
   );
 };
