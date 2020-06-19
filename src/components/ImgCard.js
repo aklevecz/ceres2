@@ -4,8 +4,10 @@ import Lottie from "react-lottie";
 import animationData from "../lottie/circle.json";
 
 import styled from "styled-components";
+import { CHIMP_URL } from "../actions/view";
 
 const BottomWrapper = styled.div`
+  font-weight: 600;
   margin: 1.7rem 1.2rem;
 `;
 
@@ -17,7 +19,7 @@ const ImgTitle = styled.div`
 const ImgDesc = styled.div`
   font-family: Euclid;
   font-size: 1rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 `;
 
 const ImgCard = ({ description, id, orientation, title, url }) => {
@@ -41,12 +43,12 @@ const ImgCard = ({ description, id, orientation, title, url }) => {
           style={{
             display: loaded ? "block" : "none",
             maxWidth: "500px",
-            transform: orientation === "portrait" ? "rotate(90deg)" : ""
+            transform: orientation === "portrait" ? "rotate(90deg)" : "",
           }}
           src={url}
-          src={`https://chimpstagram-upload.glitch.me/imgs/${id}.png`}
+          src={`${CHIMP_URL}/imgs/${id}.png`}
           width="100%"
-          onLoad={e => {
+          onLoad={(e) => {
             console.log(e.target.height);
             setLoaded(true);
           }}
