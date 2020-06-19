@@ -38,9 +38,8 @@ const Place = ({ history, match, photos }) => {
         path={`${match.url}/view/:pic`}
         render={({ match }) => {
           const pic = photos.filter(
-            p => p.id === parseInt(match.params.pic)
+            (p) => p.id === parseInt(match.params.pic)
           )[0];
-          pic && console.log(pic.orientation);
           document.getElementsByTagName("body")[0].style.overflow = "hidden";
           document.getElementsByTagName("body")[0].style.height = "100%";
           return (
@@ -54,7 +53,7 @@ const Place = ({ history, match, photos }) => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  height: "100%"
+                  height: "100%",
                 }}
               >
                 <Lottie
@@ -69,11 +68,9 @@ const Place = ({ history, match, photos }) => {
                     src={pic.url}
                     style={{
                       transform:
-                        pic.orientation === "portrait" ? "rotate(90deg)" : ""
+                        pic.orientation === "portrait" ? "rotate(90deg)" : "",
                     }}
-                    onLoad={e => {
-                      console.log(e.target.height);
-                    }}
+                    onLoad={(e) => {}}
                     onError={() => console.log("img error")}
                   />
                 )}
@@ -85,14 +82,13 @@ const Place = ({ history, match, photos }) => {
       <MainHeader>{place}</MainHeader>
       <Container>
         {photos
-          .filter(p => p.folder === place)
-          .map(p => {
+          .filter((p) => p.folder === place)
+          .map((p) => {
             return (
               <CardContainer
                 key={p.url}
                 to={`${match.url}/chicken/${p.id}`}
                 onClick={() => {
-                  console.log("ASDASDASD");
                   history.push(`${match.url}/view/${p.id}`);
                 }}
               >
@@ -111,9 +107,9 @@ const Place = ({ history, match, photos }) => {
   );
 };
 
-const mapState = state => {
+const mapState = (state) => {
   const {
-    view: { photos }
+    view: { photos },
   } = state;
   return { photos };
 };

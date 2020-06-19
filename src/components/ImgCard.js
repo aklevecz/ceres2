@@ -49,7 +49,6 @@ const ImgCard = ({ description, id, orientation, title, url }) => {
           src={`${CHIMP_URL}/imgs/${id}.png`}
           width="100%"
           onLoad={(e) => {
-            console.log(e.target.height);
             setLoaded(true);
           }}
           onError={() => setLoaded(true)}
