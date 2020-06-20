@@ -1,5 +1,3 @@
 # EYES FRONTEND
 
-![eyes](https://eyes.klevecz.net/eye.png)
-
-[LINK]("https://eyes.klevecz.net")
+[![eye](https://eyes.klevecz.net/eye.pngg)](http://eyes.klevecz.net/)
