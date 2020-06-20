@@ -49,7 +49,7 @@ const Home = ({ history, loading, previews }) => {
           options={{
             loop: true,
             autoplay: true,
-            animationData: HelloAnimation
+            animationData: HelloAnimation,
           }}
         />
       </div>
@@ -62,18 +62,19 @@ const Home = ({ history, loading, previews }) => {
           options={{
             loop: false,
             autoplay: true,
-            animationData: EyeAnimation
+            animationData: EyeAnimation,
           }}
           eventListeners={[
-            { eventName: "complete", callback: () => setAnimate(true) }
+            { eventName: "complete", callback: () => setAnimate(true) },
           ]}
         />
       </div>
       <div style={{ display: window.innerWidth > 768 ? "flex" : "block" }}>
-        {previews.map(p => {
+        {previews.map((p) => {
           return (
             <PlaceContainer key={p.title}>
               <img
+                alt={"oopsies"}
                 style={{ display: "block", margin: "auto", width: "100%" }}
                 src={p.url}
                 onClick={() => history.push(`/place/${p.folder}`)}
@@ -87,9 +88,9 @@ const Home = ({ history, loading, previews }) => {
   );
 };
 
-const mapState = state => {
+const mapState = (state) => {
   const {
-    view: { loading, previews }
+    view: { loading, previews },
   } = state;
   return { loading, previews };
 };

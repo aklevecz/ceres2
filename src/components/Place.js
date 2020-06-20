@@ -63,6 +63,7 @@ const Place = ({ history, match, photos }) => {
                 />
                 {pic && (
                   <img
+                    alt={"whoops"}
                     width={pic.orientation === "landscape" ? "100%" : ""}
                     height={pic.orientation === "portrait" ? "100%" : ""}
                     src={pic.url}
@@ -94,7 +95,6 @@ const Place = ({ history, match, photos }) => {
               >
                 <ImgCard
                   id={p.id}
-                  url={p.url}
                   title={p.title}
                   description={p.description}
                   orientation={p.orientation}

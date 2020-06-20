@@ -2,11 +2,9 @@ import {
   HIDE,
   SHOW,
   SEED,
-  FADE_IN,
-  FADE_OUT,
   FETCHED_DATA,
   FETCHING_DATA,
-  CHANGE_TOPIC
+  CHANGE_TOPIC,
 } from "../actions/view";
 
 const VIEW_STATE = {
@@ -14,7 +12,7 @@ const VIEW_STATE = {
   loading: true,
   topic: "NOLA",
   photos: [],
-  previews: []
+  previews: [],
 };
 
 const viewReducer = (state = VIEW_STATE, action) => {
@@ -27,7 +25,7 @@ const viewReducer = (state = VIEW_STATE, action) => {
       return {
         ...state,
         photos: [...action.photos],
-        previews: [...action.previews]
+        previews: [...action.previews],
       };
     case FETCHING_DATA:
       return { ...state, loading: true };
@@ -41,23 +39,3 @@ const viewReducer = (state = VIEW_STATE, action) => {
 };
 
 export default viewReducer;
-
-const UI_STATE = {
-  header: 1
-};
-
-const uiReducer = (state = UI_STATE, action) => {
-  switch (action.type) {
-    case FADE_IN:
-      return { ...state, header: 1 };
-    case FADE_OUT:
-      return { ...state, header: 0 };
-    default:
-      return state;
-  }
-};
-
-// export default combineReducers({
-//   view: viewReducer,
-//   ui: uiReducer
-// });

@@ -22,7 +22,7 @@ const ImgDesc = styled.div`
   margin: 0.5rem 0;
 `;
 
-const ImgCard = ({ description, id, orientation, title, url }) => {
+const ImgCard = ({ description, id, orientation, title }) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <LazyLoad
@@ -45,7 +45,6 @@ const ImgCard = ({ description, id, orientation, title, url }) => {
             maxWidth: "500px",
             transform: orientation === "portrait" ? "rotate(90deg)" : "",
           }}
-          src={url}
           src={`${CHIMP_URL}/imgs/${id}.png`}
           width="100%"
           onLoad={(e) => {
